@@ -1,9 +1,0 @@
-git add .
-git commit -m “ANY_MASSAGE”
-git push -u origin main
-
-install.packages("usethis")
-usethis::create_github_token()
-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
-install.packages("gitcreds")
-gitcreds::gitcreds_set()
