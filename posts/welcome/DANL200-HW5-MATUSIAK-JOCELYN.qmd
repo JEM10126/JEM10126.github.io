@@ -58,9 +58,9 @@ NFL2022_stuffs <- read_csv('https://bcdanl.github.io/data/NFL2022_stuffs.csv')
 |     |
 
 +---------+-----------------+---------+---------+---------+---------+---------+-------+
-| play_id | game_id         | drive   | week    | posteam | qtr     | down    |       |
+| \<dbl\> | game_id         | drive   | week    | posteam | qtr     | down    |       |
 |         |                 |         |         |         |         |         |       |
-| \<dbl\> | \<chr\>         | \<dbl\> | \<dbl\> | \<chr\> | \<dbl\> | \<dbl\> |       |
+|         | \<chr\>         | \<dbl\> | \<dbl\> | \<chr\> | \<dbl\> | \<dbl\> |       |
 +========:+:================+========:+========:+:========+========:+========:+=======+
 | 1       | 2022_01_BAL_NYJ | NA      | 1       | NA      | 1       | NA      |       |
 +---------+-----------------+---------+---------+---------+---------+---------+-------+
@@ -266,9 +266,6 @@ Previous
 NFL2022_stuffs_EPA <- merge(NFL2022_stuffs, NFL2022_epa)
 
 NFL2022_stuffs_EPA <- subset(NFL2022_stuffs_EPA, !is.na(passer))
-
-print(NFL2022_stuffs_EPA)
-
 ```
 
 ## Q2e.
