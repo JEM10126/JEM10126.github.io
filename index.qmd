@@ -2,7 +2,7 @@
 title: "Jocelyn Matusiak"
 about:
   template: trestles  # jolla  trestles  solana  marquee  broadside
-  image: img/img_4152.jpeg
+  image: img/IMG_4152.jpeg
   image-width: 15em
   image-shape: round # rectangle  round  rounded
   
