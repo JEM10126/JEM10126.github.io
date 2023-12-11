@@ -2,10 +2,15 @@
   {
     "listing": "/blog-listing.html",
     "items": [
+      "/posts/welcome/DANL200-HW5-MATUSIAK-JOCELYN.html",
       "/posts/beermarkets/spotify.html",
       "/posts/restaurants/restaurants.html",
       "/posts/post-with-code/beer_markets.html",
       "/posts/welcome/index.html"
     ]
+  },
+  {
+    "listing": "/posts/welcome/DANL200-HW5-MATUSIAK-JOCELYN.html",
+    "items": []
   }
 ]
