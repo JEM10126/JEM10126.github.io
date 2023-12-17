@@ -34,7 +34,7 @@ execute:
   fig-width: 9
   
 ---
-```{r setup, include = FALSE}
+```{r}
 library(tidyverse)
 library(hrbrthemes)
 library(skimr)
@@ -42,13 +42,13 @@ library(skimr)
 
 
 
-# Introduction
+## Introduction
 
 About this project :clap:
 
   
 ```{r}
-day_wise <- read_csv('https://JEM10126.github.io/day_wise.csv')
+day_wise <- read_csv('day_wise.csv')
 nvars <- format(round(ncol(day_wise), 0), 
                 nsmall=0, 
                 big.mark=",") 
@@ -83,7 +83,7 @@ The number of variables is `r nvars`; the number of observations is `r nobs`.
 - Summarize the project in the last paragraph.
 
 
-# Data
+## Data
 
 ## Data Summary
 
@@ -170,4 +170,15 @@ src="https://bcdanl.shinyapps.io/01_old_faithful/">
 - [https://quarto.org/docs/websites/](https://quarto.org/docs/websites/)
 
 - [R for Data Science](http://r4ds.hadley.nz) by [Hadley Wickham](https://hadley.nz)
+
+
+
+
+
+
+
+
+
+
+
 
