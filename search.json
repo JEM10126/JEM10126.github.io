@@ -277,7 +277,7 @@
     "href": "project.html#introduction",
     "title": "DANL Project",
     "section": "0.1 Introduction",
-    "text": "0.1 Introduction\n\nWhy does this project matter? -This project matters because it assess the rate at which people are contracting and healing from the COVID-19 virus at a daily rate.\nOur data visualization entails both Deaths and Recovered are increasing at an exponential rate. This provides the assumption that while many may be dying there are a greater amount recovering. In the real world this provides hope for those who are suffering from the virus. Our data transformation further proves the point that there are more total recovered per day than the mean amount of deaths."
+    "text": "0.1 Introduction\n\nWhy does this project matter?\nThis project matters because it assess the rate at which people are contracting and healing from the COVID-19 virus at a daily rate.\nOur data visualization entails both Deaths and Recovered are increasing at an exponential rate. This provides the assumption that while many may be dying there are a greater amount recovering. In the real world this provides hope for those who are suffering from the virus. Our data transformation further proves the point that there are more total recovered per day than the mean amount of deaths."
   },
   {
     "objectID": "project.html#data",
