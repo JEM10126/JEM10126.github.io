@@ -60,8 +60,8 @@ The number of variables is `r nvars`; the number of observations is `r nobs`.
 
 
 ## Introduction
-  - Why does this project mattter?
-  this project matters because it assess the rate at which people are 
+  - Why does this project matter?
+  -This project matters because it assess the rate at which people are 
   contracting and healing from the COVID-19 virus at a daily rate.
   
   - Our data visualization entails both Deaths and Recovered 
@@ -69,7 +69,7 @@ The number of variables is `r nvars`; the number of observations is `r nobs`.
   that while many may be dying there are a greater amount recovering. 
   In the real world this provides hope for those who are suffering from 
   the virus. Our data transformation further proves the point that there are 
-  more total recovered per day than the mean amount of deaths
+  more total recovered per day than the mean amount of deaths.
 
 ## Data Summary
 
