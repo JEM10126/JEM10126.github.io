@@ -48,7 +48,7 @@ About this project :clap:
 
   
 ```{r}
-day_wise <- read_csv('https://jem10126.github.io/day_wise.csv')
+day_wise <- read_csv('https://JEM10126.github.io/day_wise.csv')
 nvars <- format(round(ncol(day_wise), 0), 
                 nsmall=0, 
                 big.mark=",") 
