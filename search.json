@@ -313,5 +313,12 @@
     "title": "DANL Project",
     "section": "1.5 Data Transformation",
     "text": "1.5 Data Transformation\n\nday_wise1 &lt;- day_wise %&gt;% \n  group_by(Deaths, Recovered) %&gt;% \n  summarise(Recovered_tot = sum(Recovered, na.rm = T),\n            Deaths_mean = round(mean(Deaths, na.rm = T), 2),\n            .groups = \"drop\")"
+  },
+  {
+    "objectID": "project.html#group-relevancy",
+    "href": "project.html#group-relevancy",
+    "title": "DANL Project",
+    "section": "2.1 Group relevancy",
+    "text": "2.1 Group relevancy\nWe wanted to include how much Sophia has helped in our project while not being able to do it herself. She has attended all meetings with us as a group and helped us whenever we neded extra assistance."
   }
 ]

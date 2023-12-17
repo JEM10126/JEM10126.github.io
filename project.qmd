@@ -3,9 +3,9 @@ title: DANL Project
 subtitle: "Data-Driven Mastery: Unlocking Business Potential"
 author: 
   - Jocelyn Matusiak
-  - Jordan 
-  - Julia
-  - Sophia
+  - Jordan Alfano
+  - Julia Candee
+  - Sophia Frisiras
 
 toc: true
 toc-title: "Table of Contents"
@@ -131,6 +131,11 @@ rmarkdown::paged_table(day_wise1)
 
 - [R for Data Science](http://r4ds.hadley.nz) by [Hadley Wickham](https://hadley.nz)
 
+## Group relevancy
+
+We wanted to include how much Sophia has helped in our project 
+while not being able to do it herself. She has attended all meetings 
+with us as a group and helped us whenever we neded extra assistance.
 
 
 
