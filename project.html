@@ -198,6 +198,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="introduction" class="level2" data-number="0.1">
 <h2 data-number="0.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">0.1</span> Introduction</h2>
+<ul>
+<li><p>Why does this project mattter? this project matters because it assess the rate at which people are contracting and healing from the COVID-19 virus at a daily rate.</p></li>
+<li><p>Our data visualization entails both Deaths and Recovered are increasing at an exponential rate. This provides the assumption that while many may be dying there are a greater amount recovering. In the real world this provides hope for those who are suffering from the virus. Our data transformation further proves the point that there are more total recovered per day than the mean amount of deaths</p></li>
+</ul>
 <p>About this project :clap:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>day_wise <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">'https://jem10126.github.io/day_wise.csv'</span>)</span>
@@ -238,35 +242,291 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="data-summary" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="data-summary"><span class="header-section-number">1.2</span> Data Summary</h2>
 <ul>
-<li>Summary statistics (Use <code>skimr::skim()</code>)</li>
+<li>Summary statistics (Use <code>skimr::skim(day_wise)</code>)</li>
 </ul>
 </section>
 <section id="data-1" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="data-1"><span class="header-section-number">1.3</span> Data</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>skimr<span class="sc">::</span><span class="fu">skim</span>(day_wise)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>Data summary</caption>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Name</td>
+<td style="text-align: left;">day_wise</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Number of rows</td>
+<td style="text-align: left;">188</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Number of columns</td>
+<td style="text-align: left;">12</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">_______________________</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Column type frequency:</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Date</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">11</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">________________________</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Group variables</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: Date</strong></p>
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 12%">
+<col style="width: 17%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">skim_variable</th>
+<th style="text-align: right;">n_missing</th>
+<th style="text-align: right;">complete_rate</th>
+<th style="text-align: left;">min</th>
+<th style="text-align: left;">max</th>
+<th style="text-align: left;">median</th>
+<th style="text-align: right;">n_unique</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Date</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">2020-01-22</td>
+<td style="text-align: left;">2020-07-27</td>
+<td style="text-align: left;">2020-04-24</td>
+<td style="text-align: right;">188</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: numeric</strong></p>
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 7%">
+<col style="width: 11%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 5%">
+<col style="width: 7%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 9%">
+<col style="width: 4%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">skim_variable</th>
+<th style="text-align: right;">n_missing</th>
+<th style="text-align: right;">complete_rate</th>
+<th style="text-align: right;">mean</th>
+<th style="text-align: right;">sd</th>
+<th style="text-align: right;">p0</th>
+<th style="text-align: right;">p25</th>
+<th style="text-align: right;">p50</th>
+<th style="text-align: right;">p75</th>
+<th style="text-align: right;">p100</th>
+<th style="text-align: left;">hist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Confirmed</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4406960.01</td>
+<td style="text-align: right;">4757988.32</td>
+<td style="text-align: right;">555.00</td>
+<td style="text-align: right;">112191.00</td>
+<td style="text-align: right;">2848733.00</td>
+<td style="text-align: right;">7422045.50</td>
+<td style="text-align: right;">16480485.00</td>
+<td style="text-align: left;">▇▃▂▂▁</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Deaths</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">230770.76</td>
+<td style="text-align: right;">217929.09</td>
+<td style="text-align: right;">17.00</td>
+<td style="text-align: right;">3935.00</td>
+<td style="text-align: right;">204190.00</td>
+<td style="text-align: right;">418634.50</td>
+<td style="text-align: right;">654036.00</td>
+<td style="text-align: left;">▇▂▃▃▂</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Recovered</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2066001.22</td>
+<td style="text-align: right;">2627976.39</td>
+<td style="text-align: right;">28.00</td>
+<td style="text-align: right;">60441.25</td>
+<td style="text-align: right;">784784.00</td>
+<td style="text-align: right;">3416395.75</td>
+<td style="text-align: right;">9468087.00</td>
+<td style="text-align: left;">▇▂▁▁▁</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Active</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2110188.03</td>
+<td style="text-align: right;">1969670.45</td>
+<td style="text-align: right;">510.00</td>
+<td style="text-align: right;">58641.75</td>
+<td style="text-align: right;">1859759.00</td>
+<td style="text-align: right;">3587015.25</td>
+<td style="text-align: right;">6358362.00</td>
+<td style="text-align: left;">▇▃▃▂▂</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">New cases</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">87771.02</td>
+<td style="text-align: right;">75295.29</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">5568.50</td>
+<td style="text-align: right;">81114.00</td>
+<td style="text-align: right;">131502.50</td>
+<td style="text-align: right;">282756.00</td>
+<td style="text-align: left;">▇▇▃▂▂</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">New deaths</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3478.82</td>
+<td style="text-align: right;">2537.74</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">250.75</td>
+<td style="text-align: right;">4116.00</td>
+<td style="text-align: right;">5346.00</td>
+<td style="text-align: right;">9966.00</td>
+<td style="text-align: left;">▇▃▇▃▁</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">New recovered</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">50362.02</td>
+<td style="text-align: right;">56090.89</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">2488.25</td>
+<td style="text-align: right;">30991.50</td>
+<td style="text-align: right;">79706.25</td>
+<td style="text-align: right;">284394.00</td>
+<td style="text-align: left;">▇▂▂▁▁</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Deaths / 100 Cases</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4.86</td>
+<td style="text-align: right;">1.58</td>
+<td style="text-align: right;">2.04</td>
+<td style="text-align: right;">3.51</td>
+<td style="text-align: right;">4.85</td>
+<td style="text-align: right;">6.30</td>
+<td style="text-align: right;">7.18</td>
+<td style="text-align: left;">▅▅▆▅▇</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Recovered / 100 Cases</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">34.34</td>
+<td style="text-align: right;">16.21</td>
+<td style="text-align: right;">1.71</td>
+<td style="text-align: right;">22.78</td>
+<td style="text-align: right;">35.68</td>
+<td style="text-align: right;">48.95</td>
+<td style="text-align: right;">57.45</td>
+<td style="text-align: left;">▃▃▆▅▇</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Deaths / 100 Recovered</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">22.10</td>
+<td style="text-align: right;">22.57</td>
+<td style="text-align: right;">6.26</td>
+<td style="text-align: right;">9.65</td>
+<td style="text-align: right;">15.38</td>
+<td style="text-align: right;">25.34</td>
+<td style="text-align: right;">134.43</td>
+<td style="text-align: left;">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">No.&nbsp;of countries</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">144.35</td>
+<td style="text-align: right;">65.18</td>
+<td style="text-align: right;">6.00</td>
+<td style="text-align: right;">101.25</td>
+<td style="text-align: right;">184.00</td>
+<td style="text-align: right;">187.00</td>
+<td style="text-align: right;">187.00</td>
+<td style="text-align: left;">▂▁▁▁▇</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </section>
 <section id="data-visualization" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="data-visualization"><span class="header-section-number">1.4</span> Data Visualization</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>day_wise <span class="sc">%&gt;%</span> </span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">log</span>(Deaths), </span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>             <span class="at">y =</span> <span class="fu">log</span>(Recovered))) <span class="sc">+</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> .<span class="dv">1</span>,<span class="at">color =</span> <span class="st">'purple'</span>) <span class="sc">+</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> lm, <span class="at">se =</span> F) <span class="sc">+</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">'top'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>day_wise <span class="sc">%&gt;%</span> </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">log</span>(Deaths), </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>             <span class="at">y =</span> <span class="fu">log</span>(Recovered))) <span class="sc">+</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> .<span class="dv">1</span>,<span class="at">color =</span> <span class="st">'purple'</span>) <span class="sc">+</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> lm, <span class="at">se =</span> F) <span class="sc">+</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">'top'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="project_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="864"></p>
+<p><img src="project_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="864"></p>
 </div>
 </div>
 </section>
 <section id="data-transformation" class="level2" data-number="1.5">
 <h2 data-number="1.5" class="anchored" data-anchor-id="data-transformation"><span class="header-section-number">1.5</span> Data Transformation</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>day_wise1 <span class="ot">&lt;-</span> day_wise <span class="sc">%&gt;%</span> </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Deaths, Recovered) <span class="sc">%&gt;%</span> </span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">Recovered_tot =</span> <span class="fu">sum</span>(Recovered, <span class="at">na.rm =</span> T),</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">Deaths_mean =</span> <span class="fu">round</span>(<span class="fu">mean</span>(Deaths, <span class="at">na.rm =</span> T), <span class="dv">2</span>),</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">.groups =</span> <span class="st">"drop"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>day_wise1 <span class="ot">&lt;-</span> day_wise <span class="sc">%&gt;%</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Deaths, Recovered) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">Recovered_tot =</span> <span class="fu">sum</span>(Recovered, <span class="at">na.rm =</span> T),</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">Deaths_mean =</span> <span class="fu">round</span>(<span class="fu">mean</span>(Deaths, <span class="at">na.rm =</span> T), <span class="dv">2</span>),</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">.groups =</span> <span class="st">"drop"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell-output-display">
 
