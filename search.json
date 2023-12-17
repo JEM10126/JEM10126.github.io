@@ -107,9 +107,9 @@
   {
     "objectID": "project.html",
     "href": "project.html",
-    "title": "DANL 200: Introduction to Data AnalyticsProject",
+    "title": "DANL Project",
     "section": "",
-    "text": "About this project :clap:\n\nday_wise &lt;- read_csv('https://jem10126.github.io/day_wise.csv')\nnvars &lt;- format(round(ncol(day_wise), 0), \n                nsmall=0, \n                big.mark=\",\") \nnobs &lt;- format(round(nrow(day_wise), 0), \n                nsmall=0, \n                big.mark=\",\")"
+    "text": "library(tidyverse)\nlibrary(hrbrthemes)\nlibrary(skimr)"
   },
   {
     "objectID": "project.html#summary-statistics",
@@ -271,5 +271,47 @@
     "title": "DANL 200: Introduction to Data AnalyticsProject",
     "section": "2.7 Inserting a HTML page",
     "text": "2.7 Inserting a HTML page"
+  },
+  {
+    "objectID": "project.html#introduction",
+    "href": "project.html#introduction",
+    "title": "DANL Project",
+    "section": "0.1 Introduction",
+    "text": "0.1 Introduction\nAbout this project :clap:\n\nday_wise &lt;- read_csv('https://jem10126.github.io/day_wise.csv')\nnvars &lt;- format(round(ncol(day_wise), 0), \n                nsmall=0, \n                big.mark=\",\") \nnobs &lt;- format(round(nrow(day_wise), 0), \n                nsmall=0, \n                big.mark=\",\")\n\n\nHere is the paged table using rmarkdown::paged_table() with the results = 'asis' chunk option.\n\n\n\n\n  \n\n\n\nThe number of variables is 12; the number of observations is 188.\n\nRoses are red\nviolets are blue."
+  },
+  {
+    "objectID": "project.html#data",
+    "href": "project.html#data",
+    "title": "DANL Project",
+    "section": "1.1 Data",
+    "text": "1.1 Data"
+  },
+  {
+    "objectID": "project.html#data-summary",
+    "href": "project.html#data-summary",
+    "title": "DANL Project",
+    "section": "1.2 Data Summary",
+    "text": "1.2 Data Summary\n\nSummary statistics (Use skimr::skim())"
+  },
+  {
+    "objectID": "project.html#data-1",
+    "href": "project.html#data-1",
+    "title": "DANL Project",
+    "section": "1.3 Data",
+    "text": "1.3 Data"
+  },
+  {
+    "objectID": "project.html#data-visualization",
+    "href": "project.html#data-visualization",
+    "title": "DANL Project",
+    "section": "1.4 Data Visualization",
+    "text": "1.4 Data Visualization\n\nday_wise %&gt;% \n  ggplot(aes(x = log(Deaths), \n             y = log(Recovered))) +\n  geom_point(alpha = .1,color = 'purple') +\n  geom_smooth(method = lm, se = F) +\n  theme_bw() +\n  theme(legend.position = 'top')"
+  },
+  {
+    "objectID": "project.html#data-transformation",
+    "href": "project.html#data-transformation",
+    "title": "DANL Project",
+    "section": "1.5 Data Transformation",
+    "text": "1.5 Data Transformation\n\nday_wise1 &lt;- day_wise %&gt;% \n  group_by(Deaths, Recovered) %&gt;% \n  summarise(Recovered_tot = sum(Recovered, na.rm = T),\n            Deaths_mean = round(mean(Deaths, na.rm = T), 2),\n            .groups = \"drop\")"
   }
 ]
