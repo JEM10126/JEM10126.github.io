@@ -149,17 +149,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul class="collapse">
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">0.1</span> Introduction</a></li>
-  <li><a href="#introduction-1" id="toc-introduction-1" class="nav-link" data-scroll-target="#introduction-1"><span class="header-section-number">1</span> Introduction</a>
+  <li><a href="#data-summary" id="toc-data-summary" class="nav-link" data-scroll-target="#data-summary"><span class="header-section-number">0.2</span> Data Summary</a></li>
+  <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization"><span class="header-section-number">0.3</span> Data Visualization</a></li>
+  <li><a href="#data-transformation" id="toc-data-transformation" class="nav-link" data-scroll-target="#data-transformation"><span class="header-section-number">0.4</span> Data Transformation</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">1</span> References</a>
   <ul class="collapse">
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data"><span class="header-section-number">1.1</span> Data</a></li>
-  <li><a href="#data-summary" id="toc-data-summary" class="nav-link" data-scroll-target="#data-summary"><span class="header-section-number">1.2</span> Data Summary</a></li>
-  <li><a href="#data-1" id="toc-data-1" class="nav-link" data-scroll-target="#data-1"><span class="header-section-number">1.3</span> Data</a></li>
-  <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization"><span class="header-section-number">1.4</span> Data Visualization</a></li>
-  <li><a href="#data-transformation" id="toc-data-transformation" class="nav-link" data-scroll-target="#data-transformation"><span class="header-section-number">1.5</span> Data Transformation</a></li>
-  </ul></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">2</span> References</a>
-  <ul class="collapse">
-  <li><a href="#group-relevancy" id="toc-group-relevancy" class="nav-link" data-scroll-target="#group-relevancy"><span class="header-section-number">2.1</span> Group relevancy</a></li>
+  <li><a href="#group-relevancy" id="toc-group-relevancy" class="nav-link" data-scroll-target="#group-relevancy"><span class="header-section-number">1.1</span> Group relevancy</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -199,13 +194,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(hrbrthemes)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(skimr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="introduction" class="level2" data-number="0.1">
-<h2 data-number="0.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">0.1</span> Introduction</h2>
-<ul>
-<li><p>Why does this project mattter? this project matters because it assess the rate at which people are contracting and healing from the COVID-19 virus at a daily rate.</p></li>
-<li><p>Our data visualization entails both Deaths and Recovered are increasing at an exponential rate. This provides the assumption that while many may be dying there are a greater amount recovering. In the real world this provides hope for those who are suffering from the virus. Our data transformation further proves the point that there are more total recovered per day than the mean amount of deaths</p></li>
-</ul>
-<p>About this project :clap:</p>
+<p>About this project :clap: ##</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>day_wise <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">'https://jem10126.github.io/day_wise.csv'</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>nvars <span class="ot">&lt;-</span> <span class="fu">format</span>(<span class="fu">round</span>(<span class="fu">ncol</span>(day_wise), <span class="dv">0</span>), </span>
@@ -229,27 +218,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><br></p>
 <p>The number of variables is 12; the number of observations is 188.</p>
 <p><br></p>
-<p><strong>Roses</strong> are <span style="color: red;">red</span></p>
-<p><em>violets</em> are <span style="color: blue;">blue</span>.</p>
-</section>
-<section id="introduction-1" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
+<section id="introduction" class="level2" data-number="0.1">
+<h2 data-number="0.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">0.1</span> Introduction</h2>
 <ul>
-<li><p>Why does your project matter?</p></li>
-<li><p>Motivate your project.</p></li>
-<li><p>Summarize the project in the last paragraph.</p></li>
+<li><p>Why does this project mattter? this project matters because it assess the rate at which people are contracting and healing from the COVID-19 virus at a daily rate.</p></li>
+<li><p>Our data visualization entails both Deaths and Recovered are increasing at an exponential rate. This provides the assumption that while many may be dying there are a greater amount recovering. In the real world this provides hope for those who are suffering from the virus. Our data transformation further proves the point that there are more total recovered per day than the mean amount of deaths</p></li>
 </ul>
-<section id="data" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="data"><span class="header-section-number">1.1</span> Data</h2>
 </section>
-<section id="data-summary" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="data-summary"><span class="header-section-number">1.2</span> Data Summary</h2>
+<section id="data-summary" class="level2" data-number="0.2">
+<h2 data-number="0.2" class="anchored" data-anchor-id="data-summary"><span class="header-section-number">0.2</span> Data Summary</h2>
 <ul>
 <li>Summary statistics (Use <code>skimr::skim(day_wise)</code>)</li>
 </ul>
-</section>
-<section id="data-1" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="data-1"><span class="header-section-number">1.3</span> Data</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>skimr<span class="sc">::</span><span class="fu">skim</span>(day_wise)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -507,8 +487,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="data-visualization" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="data-visualization"><span class="header-section-number">1.4</span> Data Visualization</h2>
+<section id="data-visualization" class="level2" data-number="0.3">
+<h2 data-number="0.3" class="anchored" data-anchor-id="data-visualization"><span class="header-section-number">0.3</span> Data Visualization</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>day_wise <span class="sc">%&gt;%</span> </span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">log</span>(Deaths), </span>
@@ -522,8 +502,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="data-transformation" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="data-transformation"><span class="header-section-number">1.5</span> Data Transformation</h2>
+<section id="data-transformation" class="level2" data-number="0.4">
+<h2 data-number="0.4" class="anchored" data-anchor-id="data-transformation"><span class="header-section-number">0.4</span> Data Transformation</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>day_wise1 <span class="ot">&lt;-</span> day_wise <span class="sc">%&gt;%</span> </span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Deaths, Recovered) <span class="sc">%&gt;%</span> </span>
@@ -541,16 +521,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p><br><br><br><br></p>
 </section>
-</section>
-<section id="references" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> References</h1>
+<section id="references" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> References</h1>
 <ul>
 <li><p><a href="https://quarto.org/docs/output-formats/html-basics.html">https://quarto.org/docs/output-formats/html-basics.html</a></p></li>
 <li><p><a href="https://quarto.org/docs/websites/">https://quarto.org/docs/websites/</a></p></li>
 <li><p><a href="http://r4ds.hadley.nz">R for Data Science</a> by <a href="https://hadley.nz">Hadley Wickham</a></p></li>
 </ul>
-<section id="group-relevancy" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="group-relevancy"><span class="header-section-number">2.1</span> Group relevancy</h2>
+<section id="group-relevancy" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="group-relevancy"><span class="header-section-number">1.1</span> Group relevancy</h2>
 <p>We wanted to include how much Sophia has helped in our project while not being able to do it herself. She has attended all meetings with us as a group and helped us whenever we neded extra assistance.</p>
 
 

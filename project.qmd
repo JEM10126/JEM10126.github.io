@@ -29,20 +29,10 @@ library(skimr)
 
 
 
-## Introduction
-  - Why does this project mattter?
-  this project matters because it assess the rate at which people are 
-  contracting and healing from the COVID-19 virus at a daily rate.
-  
-  - Our data visualization entails both Deaths and Recovered 
-  are increasing at an exponential rate. This provides the assumption 
-  that while many may be dying there are a greater amount recovering. 
-  In the real world this provides hope for those who are suffering from 
-  the virus. Our data transformation further proves the point that there are 
-  more total recovered per day than the mean amount of deaths
+
   
 About this project :clap:
-
+##
   
 ```{r}
 day_wise <- read_csv('https://jem10126.github.io/day_wise.csv')
@@ -67,27 +57,25 @@ The number of variables is `r nvars`; the number of observations is `r nobs`.
 
 <br>
 
-**Roses** are <span style="color: red;">red</span>
-
-*violets* are <span style="color: blue;">blue</span>.
-
-# Introduction
-
-- Why does your project matter?
-
-- Motivate your project.
-
-- Summarize the project in the last paragraph.
 
 
-## Data
+## Introduction
+  - Why does this project mattter?
+  this project matters because it assess the rate at which people are 
+  contracting and healing from the COVID-19 virus at a daily rate.
+  
+  - Our data visualization entails both Deaths and Recovered 
+  are increasing at an exponential rate. This provides the assumption 
+  that while many may be dying there are a greater amount recovering. 
+  In the real world this provides hope for those who are suffering from 
+  the virus. Our data transformation further proves the point that there are 
+  more total recovered per day than the mean amount of deaths
 
 ## Data Summary
 
 - Summary statistics (Use `skimr::skim(day_wise)`)
 
 
-## Data
 ```{r}
 skimr::skim(day_wise)
 ```
