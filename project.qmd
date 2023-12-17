@@ -123,7 +123,8 @@ rmarkdown::paged_table(day_wise1)
 
 We wanted to include how much Sophia has helped in our project 
 while not being able to do it herself. She has attended all meetings 
-with us as a group and helped us whenever we neded extra assistance.
+with us as a group and helped us whenever we needed extra assistance.
+
 
 
 
