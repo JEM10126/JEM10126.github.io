@@ -47,7 +47,7 @@ library(skimr)
   find the resulting table produced through our code. The table is specifically
   designed to highlight the daily number of COVID-19 cases, as well as the 
   status of those who were diagnosed - whether they have recovered, 
-  passed away, or are still actively ill.
+  passed away, or are still actively ill.(Sophia)
 
 
 ##Data
@@ -85,7 +85,7 @@ The number of variables is `r nvars`; the number of observations is `r nobs`.
   - We are now performing summary statistics on our data set. We use the skim () 
 code to find the mean, median, minimum,  maximum, and quantile values. 
 This gives us an overview of our dataset and helps us determine relationships
-between our variables.
+between our variables.(Sophia)
 
 
 ```{r}
@@ -93,7 +93,12 @@ skimr::skim(day_wise)
 ```
 ## Data Visualization
 
-  - Our plot represents the relationship between the logarithmic of deaths and the logarithmic of recoveries for the daily number of covid cases. For this section we decided to create a scatterplot using the geom_point () code. Along with that we used geom_smooth () to create a second line to help determine the overall pattern of our data. To better the aesthetics of our graph using the theme () code.
+  - Our plot represents the relationship between the logarithmic of deaths and 
+  the logarithmic of recoveries for the daily number of covid cases. For 
+  this section we decided to create a scatterplot using the geom_point () code.
+  Along with that we used geom_smooth () to create a second line to help 
+  determine the overall pattern of our data. To better the aesthetics of 
+  our graph using the theme () code.(Sophia)
 
 ```{r}
 day_wise %>% 
