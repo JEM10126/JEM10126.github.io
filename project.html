@@ -518,6 +518,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="data-transformation" class="level2" data-number="0.5">
 <h2 data-number="0.5" class="anchored" data-anchor-id="data-transformation"><span class="header-section-number">0.5</span> Data Transformation</h2>
+<ul>
+<li>For the Data Transformation section, we created another new data frame called “day_wise1”. In this data frame, we used the group_by () function to group COVID-19 cases by the total amount of recovered cases and the mean amount of deaths. This new data frame helps to better illustrate that even though there may be a significant number of deaths from COVID-19, there are more recoveries.</li>
+</ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>day_wise1 <span class="ot">&lt;-</span> day_wise <span class="sc">%&gt;%</span> </span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Deaths, Recovered) <span class="sc">%&gt;%</span> </span>
