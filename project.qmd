@@ -27,12 +27,30 @@ library(hrbrthemes)
 library(skimr)
 ```
 
-
-
+## Introduction
+  - Why does this project matter?
+  
+  - This project matters because it assess the rate at which people are 
+  contracting and healing from the COVID-19 virus at a daily rate.
+  
+  - Our data visualization entails both Deaths and Recovered 
+  are increasing at an exponential rate. This provides the assumption 
+  that while many may be dying there are a greater amount recovering. 
+  In the real world this provides hope for those who are suffering from 
+  the virus. Our data transformation further proves the point that there are 
+  more total recovered per day than the mean amount of deaths.
 
   
-About this project :clap:
-##
+## About this project:
+  - We initiated the process by generating a fresh dataset in R-studio, 
+  utilizing the path name of the "Day-Wise Covid-19" dataset. Below, you will
+  find the resulting table produced through our code. The table is specifically
+  designed to highlight the daily number of COVID-19 cases, as well as the 
+  status of those who were diagnosed - whether they have recovered, 
+  passed away, or are still actively ill.
+
+
+##Data
   
 ```{r}
 day_wise <- read_csv('https://jem10126.github.io/day_wise.csv')
@@ -59,28 +77,23 @@ The number of variables is `r nvars`; the number of observations is `r nobs`.
 
 
 
-## Introduction
-  - Why does this project matter?
-  
-  - This project matters because it assess the rate at which people are 
-  contracting and healing from the COVID-19 virus at a daily rate.
-  
-  - Our data visualization entails both Deaths and Recovered 
-  are increasing at an exponential rate. This provides the assumption 
-  that while many may be dying there are a greater amount recovering. 
-  In the real world this provides hope for those who are suffering from 
-  the virus. Our data transformation further proves the point that there are 
-  more total recovered per day than the mean amount of deaths.
 
 ## Data Summary
 
 - Summary statistics (Use `skimr::skim(day_wise)`)
+
+  - We are now performing summary statistics on our data set. We use the skim () 
+code to find the mean, median, minimum,  maximum, and quantile values. 
+This gives us an overview of our dataset and helps us determine relationships
+between our variables.
 
 
 ```{r}
 skimr::skim(day_wise)
 ```
 ## Data Visualization
+
+  - Our plot represents the relationship between the logarithmic of deaths and the logarithmic of recoveries for the daily number of covid cases. For this section we decided to create a scatterplot using the geom_point () code. Along with that we used geom_smooth () to create a second line to help determine the overall pattern of our data. To better the aesthetics of our graph using the theme () code.
 
 ```{r}
 day_wise %>% 
