@@ -150,9 +150,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">0.1</span> Introduction</a></li>
   <li><a href="#about-this-project" id="toc-about-this-project" class="nav-link" data-scroll-target="#about-this-project"><span class="header-section-number">0.2</span> About this project:</a></li>
-  <li><a href="#data-summary" id="toc-data-summary" class="nav-link" data-scroll-target="#data-summary"><span class="header-section-number">0.3</span> Data Summary</a></li>
-  <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization"><span class="header-section-number">0.4</span> Data Visualization</a></li>
-  <li><a href="#data-transformation" id="toc-data-transformation" class="nav-link" data-scroll-target="#data-transformation"><span class="header-section-number">0.5</span> Data Transformation</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data"><span class="header-section-number">0.3</span> Data</a></li>
+  <li><a href="#data-summary" id="toc-data-summary" class="nav-link" data-scroll-target="#data-summary"><span class="header-section-number">0.4</span> Data Summary</a></li>
+  <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization"><span class="header-section-number">0.5</span> Data Visualization</a></li>
+  <li><a href="#data-transformation" id="toc-data-transformation" class="nav-link" data-scroll-target="#data-transformation"><span class="header-section-number">0.6</span> Data Transformation</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">1</span> References</a>
   <ul class="collapse">
   <li><a href="#group-relevancy" id="toc-group-relevancy" class="nav-link" data-scroll-target="#group-relevancy"><span class="header-section-number">1.1</span> Group relevancy</a></li>
@@ -166,7 +167,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">DANL Project</h1>
-<p class="subtitle lead">Data-Driven Mastery: Unlocking Business Potential</p>
+<p class="subtitle lead">Data-Driven Mastery: COVID19</p>
 </div>
 
 
@@ -208,7 +209,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>We initiated the process by generating a fresh dataset in R-studio, utilizing the path name of the “Day-Wise Covid-19” dataset. Below, you will find the resulting table produced through our code. The table is specifically designed to highlight the daily number of COVID-19 cases, as well as the status of those who were diagnosed - whether they have recovered, passed away, or are still actively ill.(Sophia)</li>
 </ul>
-<p>##Data</p>
+</section>
+<section id="data" class="level2" data-number="0.3">
+<h2 data-number="0.3" class="anchored" data-anchor-id="data"><span class="header-section-number">0.3</span> Data</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>day_wise <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">'https://jem10126.github.io/day_wise.csv'</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>nvars <span class="ot">&lt;-</span> <span class="fu">format</span>(<span class="fu">round</span>(<span class="fu">ncol</span>(day_wise), <span class="dv">0</span>), </span>
@@ -233,8 +236,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The number of variables is 12; the number of observations is 188.</p>
 <p><br></p>
 </section>
-<section id="data-summary" class="level2" data-number="0.3">
-<h2 data-number="0.3" class="anchored" data-anchor-id="data-summary"><span class="header-section-number">0.3</span> Data Summary</h2>
+<section id="data-summary" class="level2" data-number="0.4">
+<h2 data-number="0.4" class="anchored" data-anchor-id="data-summary"><span class="header-section-number">0.4</span> Data Summary</h2>
 <ul>
 <li><p>Summary statistics (Use <code>skimr::skim(day_wise)</code>)</p>
 <ul>
@@ -498,8 +501,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="data-visualization" class="level2" data-number="0.4">
-<h2 data-number="0.4" class="anchored" data-anchor-id="data-visualization"><span class="header-section-number">0.4</span> Data Visualization</h2>
+<section id="data-visualization" class="level2" data-number="0.5">
+<h2 data-number="0.5" class="anchored" data-anchor-id="data-visualization"><span class="header-section-number">0.5</span> Data Visualization</h2>
 <ul>
 <li>Our plot represents the relationship between the logarithmic of deaths and the logarithmic of recoveries for the daily number of covid cases. For this section we decided to create a scatterplot using the geom_point () code. Along with that we used geom_smooth () to create a second line to help determine the overall pattern of our data. To better the aesthetics of our graph using the theme () code.(Sophia)</li>
 </ul>
@@ -516,8 +519,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="data-transformation" class="level2" data-number="0.5">
-<h2 data-number="0.5" class="anchored" data-anchor-id="data-transformation"><span class="header-section-number">0.5</span> Data Transformation</h2>
+<section id="data-transformation" class="level2" data-number="0.6">
+<h2 data-number="0.6" class="anchored" data-anchor-id="data-transformation"><span class="header-section-number">0.6</span> Data Transformation</h2>
 <ul>
 <li>For the Data Transformation section, we created another new data frame called “day_wise1”. In this data frame, we used the group_by () function to group COVID-19 cases by the total amount of recovered cases and the mean amount of deaths. This new data frame helps to better illustrate that even though there may be a significant number of deaths from COVID-19, there are more recoveries. (Sophia)</li>
 </ul>

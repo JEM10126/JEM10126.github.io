@@ -1,6 +1,6 @@
 ---
 title: DANL Project
-subtitle: "Data-Driven Mastery: Unlocking Business Potential"
+subtitle: "Data-Driven Mastery: COVID19"
 author: 
   - Jocelyn Matusiak
   - Jordan Alfano
@@ -50,7 +50,7 @@ library(skimr)
   passed away, or are still actively ill.(Sophia)
 
 
-##Data
+## Data
   
 ```{r}
 day_wise <- read_csv('https://jem10126.github.io/day_wise.csv')
@@ -91,6 +91,7 @@ between our variables.(Sophia)
 ```{r}
 skimr::skim(day_wise)
 ```
+
 ## Data Visualization
 
   - Our plot represents the relationship between the logarithmic of deaths and 
@@ -111,6 +112,7 @@ day_wise %>%
 ```
 
 ## Data Transformation
+
   - For the Data Transformation section, we created another new data frame 
   called “day_wise1”. In this data frame, we used the group_by () function to 
   group COVID-19 cases by the total amount of recovered cases and the mean 
